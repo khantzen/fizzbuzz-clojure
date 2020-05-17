@@ -3,7 +3,6 @@
 (defn filter-non-null [arr] (filter #(not (nil? %)) arr))
 (defn join_or_default [orDefault] #(if (empty? %) (str orDefault) (apply str %)))
 
-
 (defn create-fizzBuzz [fizzBuzzRules]
   (fn fb?
     ([arg]
@@ -15,7 +14,6 @@
 
     ([arg & next] (str (fb? arg) " " (apply fb? next))))
 )
-
 
 (defn create_is_divisible_by [value]  #(= 0 (mod % value)))
   
